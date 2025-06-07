@@ -1,0 +1,15 @@
+syntax = "proto3";
+package datatypes;
+
+message Vec3Local {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Vec4Local {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+  float w = 4;
+}

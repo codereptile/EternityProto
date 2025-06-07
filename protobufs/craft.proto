@@ -1,0 +1,35 @@
+syntax = "proto3";
+package eternity;
+
+import "datatypes/universe.proto";
+import "datatypes/global.proto";
+import "datatypes/local.proto";
+import "part.proto";
+
+message ConstraintBasic {
+  uint64 part_1 = 1;
+  uint64 part_2 = 2;
+  datatypes.Vec3Global position_1 = 3;
+  datatypes.Vec3Global position_2 = 4;
+  repeated float axis_limits_lo = 5;  // 6 elements for 6DOF
+  repeated float axis_limits_hi = 6;  // 6 elements for 6DOF
+}
+
+message CraftCore {
+  uint64 id = 1;
+  datatypes.Vec3Universe position = 2;
+  datatypes.Vec4Local rotation = 3;
+  datatypes.Vec3Universe velocity = 4;
+}
+
+message CraftBasic {
+  CraftCore core = 1;
+  repeated PartBasic parts = 2;
+}
+
+message CraftKey {
+  CraftCore core = 1;
+  string name = 2;
+  repeated PartKey parts = 3;
+  repeated ConstraintBasic constraints = 4;
+}

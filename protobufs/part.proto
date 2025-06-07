@@ -1,0 +1,18 @@
+syntax = "proto3";
+package eternity;
+
+import "datatypes/global.proto";
+import "datatypes/local.proto";
+
+message PartBasic {
+  uint64 id = 1;
+  datatypes.Vec3Global position = 2;  // global relative to craft
+  datatypes.Vec3Global velocity = 3;  // global relative to craft
+  datatypes.Vec4Local rotation = 4;  // float relative to CoM
+}
+
+message PartKey {
+  PartBasic basic = 1;  // Basic frame data is part of Key frame
+  string model_file = 2;
+  bool model_convex = 3;
+}

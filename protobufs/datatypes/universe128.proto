@@ -1,0 +1,13 @@
+syntax = "proto3";
+package datatypes;
+
+message Binary128 {
+  fixed64 hi = 1;
+  fixed64 lo = 2;
+}
+
+message Vec3Universe {
+  Binary128 x = 1;
+  Binary128 y = 2;
+  Binary128 z = 3;
+}
