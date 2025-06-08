@@ -19,7 +19,7 @@ message CraftCore {
   uint64 id = 1;
   datatypes.Vec3Universe position = 2;
   datatypes.Vec4Local rotation = 3;
-  datatypes.Vec3Universe velocity = 4;
+  datatypes.Vec3Global velocity = 4;
 }
 
 message CraftBasic {
