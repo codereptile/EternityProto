@@ -10,6 +10,7 @@ message PartBasic {
   datatypes.Vec3Global position = 2;  // global relative to craft
   datatypes.Vec3Global velocity = 3;  // global relative to craft
   datatypes.Vec4Local rotation = 4;  // float relative to CoM
+  float mass = 5;  // Mass in kilograms, if not specified, calculated from shape
 }
 
 message PartKey {

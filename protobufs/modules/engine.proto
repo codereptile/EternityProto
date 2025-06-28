@@ -1,8 +1,6 @@
 syntax = "proto3";
 package modules;
 
-import "datatypes/global.proto";
-
 message IspSample {
   double ambient_pressure = 1; // Pascals
   double isp = 2; // Seconds

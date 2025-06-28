@@ -1,7 +1,6 @@
 syntax = "proto3";
 package modules;
 
-import "datatypes/global.proto";
 import "modules/engine.proto";
 import "modules/aerodynamics.proto";
 
