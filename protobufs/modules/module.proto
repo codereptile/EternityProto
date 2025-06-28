@@ -1,0 +1,20 @@
+syntax = "proto3";
+package modules;
+
+import "datatypes/global.proto";
+
+message IspSample {
+  double ambient_pressure = 1; // Pascals
+  double isp = 2; // Seconds
+}
+
+message EngineModule {
+  double thrust = 1; // Thrust in Newtons in Vacuum
+  repeated IspSample isp_curve = 2; // Vacuum ISP to enough pressure for 0 ISP
+}
+
+message Module {
+  oneof frame_type {
+    EngineModule basic = 1;
+  }
+}

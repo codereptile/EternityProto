@@ -3,6 +3,7 @@ package eternity;
 
 import "datatypes/global.proto";
 import "datatypes/local.proto";
+import "modules/module.proto";
 
 message PartBasic {
   uint64 id = 1;
@@ -15,4 +16,5 @@ message PartKey {
   PartBasic basic = 1;  // Basic frame data is part of Key frame
   string model_file = 2;
   bool model_convex = 3;
+  repeated modules.Module modules = 4;
 }
