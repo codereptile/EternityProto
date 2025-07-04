@@ -3,5 +3,5 @@ syntax = "proto3";
 package modules;
 
 message AerodynamicsModule {
-
+  float reference_area = 1; // m^2
 }
