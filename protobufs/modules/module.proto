@@ -1,12 +1,14 @@
 syntax = "proto3";
 package modules;
 
-import "modules/engine.proto";
 import "modules/aerodynamics.proto";
+import "modules/engine.proto";
+import "modules/guidance.proto";
 
 message Module {
   oneof frame_type {
-    EngineModule engine = 1;
-    AerodynamicsModule aerodynamics = 2;
+    AerodynamicsModule aerodynamics = 1;
+    EngineModule engine = 2;
+    GuidanceModule guidance = 3;
   }
 }
