@@ -1,0 +1,22 @@
+syntax = "proto3";
+package eternity.networking;
+
+import "networking/auth.proto";
+
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message AuthResponse {
+  bool success = 1;
+  optional AuthToken token = 2;
+}
+
+message KeepAliveRequest {
+  AuthToken token = 1;
+}
+
+message DeAuthRequest {
+  AuthToken token = 1;
+}

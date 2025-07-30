@@ -1,0 +1,15 @@
+syntax = "proto3";
+package eternity.networking;
+
+import "networking/auth.proto";
+
+message SubscriptionRequest {
+  AuthToken token = 1;
+  int32 TCPPort = 2;
+  int32 UDPPort = 3;
+}
+
+message SubscriptionResponse {
+  bool success = 1;
+  string message = 2;
+}
