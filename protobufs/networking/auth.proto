@@ -6,3 +6,21 @@ message AuthToken {
   string value = 1;
   int64 expires_at = 2;  // Unix timestamp
 }
+
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message AuthResponse {
+  bool success = 1;
+  optional AuthToken token = 2;
+}
+
+message KeepAliveRequest {
+  AuthToken token = 1;
+}
+
+message DeAuthRequest {
+  AuthToken token = 1;
+}
