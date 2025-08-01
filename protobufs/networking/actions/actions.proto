@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package eternity.networking.actions;
+
+import "networking/auth.proto";
+
+message SpawnCraft {
+  string file = 1;
+}
+
+message Action {
+  AuthToken token = 1;
+  uint64 timestamp = 2;
+  uint32 sequential_id = 3;
+  oneof frame_type {
+    SpawnCraft spawn_craft = 4;
+  }
+}
