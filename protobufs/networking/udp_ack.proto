@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package eternity.networking;
+
+message UdpAck {
+  uint32 message_id = 1;
+  bool is_ack = 2;  // true for full ACK, false for NACK
+  repeated uint32 missing_fragments = 3;  // Only if is_ack=false
+  uint32 highest_seq = 4;  // Highest sequence number seen (for cumulative ACK)
+  string token = 5;  // Auth token for client identification
+}
