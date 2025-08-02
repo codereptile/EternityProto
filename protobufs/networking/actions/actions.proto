@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package eternity.networking.actions;
 
-import "networking/auth.proto";
-
 message SpawnCraft {
   string file = 1;
 }

@@ -1,8 +1,6 @@
 syntax = "proto3";
 package eternity.networking;
 
-import "networking/auth.proto";
-
 message SubscriptionRequest {
   string token = 1;
   int32 udp_port = 3;
