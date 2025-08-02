@@ -4,9 +4,8 @@ package eternity.networking;
 import "networking/auth.proto";
 
 message SubscriptionRequest {
-  AuthToken token = 1;
-  int32 TCPPort = 2;
-  int32 UDPPort = 3;
+  string token = 1;
+  int32 udp_port = 3;
 }
 
 message SubscriptionResponse {

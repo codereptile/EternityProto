@@ -9,7 +9,7 @@ message SpawnCraft {
 }
 
 message Action {
-  AuthToken token = 1;
+  string token = 1;
   uint64 timestamp = 2;
   uint32 sequential_id = 3;
   oneof frame_type {
