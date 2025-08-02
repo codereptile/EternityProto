@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package eternity.networking;
+
+message MetricStats {
+  double average = 1;
+  double p90 = 2;
+  double p99 = 3;
+}
+
+message ServerStats {
+  map<string, MetricStats> metrics = 1;
+}
+
+message StatsRequest {
+  string token = 1;
+}
+
+message StatsResponse {
+  ServerStats stats = 1;
+}
