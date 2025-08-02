@@ -8,12 +8,19 @@ message MetricStats {
   double p99 = 3;
 }
 
+message MetricHistory {
+  repeated MetricStats windows = 1;
+  repeated double window_ends = 2; // Unix timestamp in seconds (double)
+}
+
 message ServerStats {
-  map<string, MetricStats> metrics = 1;
+  map<string, MetricHistory> metrics = 1;
 }
 
 message StatsRequest {
   string token = 1;
+  int32 total_duration_s = 2;
+  int32 window_size_s = 3;
 }
 
 message StatsResponse {
