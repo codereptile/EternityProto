@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package eternity.networking;
+
+import "world.proto";
+
+message WorldUpdatePayload {
+  int64 server_timestamp_ms = 1;
+  oneof payload {
+    eternity.WorldKeyFrame key = 2;
+    eternity.WorldBasicFrame basic = 3;
+  }
+}
