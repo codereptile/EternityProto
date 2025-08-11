@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package eternity.networking;
 
-message UdpAck {
+message ACK {
   uint32 message_id = 1;
   bool is_ack = 2;  // true for full ACK, false for NACK
   repeated uint32 missing_fragments = 3;  // Only if is_ack=false

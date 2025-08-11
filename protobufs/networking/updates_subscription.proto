@@ -3,7 +3,6 @@ package eternity.networking;
 
 message SubscriptionRequest {
   string token = 1;
-  int32 udp_port = 3;
 }
 
 message SubscriptionResponse {
