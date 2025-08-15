@@ -5,8 +5,8 @@ package eternity.networking;
 message MetricStats {
   double average = 1;
   double p90 = 2;
-  double p99 = 3;
-  double p01 = 4;
+  double p100 = 3;
+  double p00 = 4;
   double p10 = 5;
 }
 
