@@ -10,7 +10,7 @@ message Action {
   string token = 1;
   uint64 timestamp = 2;
   uint32 sequential_id = 3;
-  oneof frame_type {
+  oneof action_type {
     SpawnCraft spawn_craft = 4;
   }
 }
