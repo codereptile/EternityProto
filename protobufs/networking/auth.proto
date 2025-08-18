@@ -4,7 +4,7 @@ package eternity.networking;
 
 message AuthTokenInfo {
   string value = 1;
-  int64 expires_at = 2;  // Unix timestamp
+  int64 expires_at = 2;  // Unix milliseconds since epoch
 }
 
 message AuthRequest {
