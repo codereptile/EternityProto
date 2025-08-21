@@ -1,0 +1,15 @@
+syntax = "proto3";
+package eternity.networking.actions.craft_controls;
+
+import "datatypes/local.proto";
+
+message SetCraftAttitude {
+  float pitch = 1; // [-1; 1]
+  float yaw = 2; // [-1; 1]
+  float roll = 3; // [-1; 1]
+}
+
+message SetCraftTargetDirection {
+  uint64 craft_id = 1;
+  datatypes.Vec3Local target_vector = 2;
+}

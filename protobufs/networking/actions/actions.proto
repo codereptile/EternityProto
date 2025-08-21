@@ -1,9 +1,14 @@
 syntax = "proto3";
-
 package eternity.networking.actions;
+
+import "networking/actions/craft_controls.proto";
 
 message SpawnCraft {
   string file = 1;
+}
+
+message SpawnCraftConfirmed {
+  uint64 craft_id = 1;
 }
 
 message Action {
@@ -12,5 +17,7 @@ message Action {
   uint32 sequential_id = 3;
   oneof action_type {
     SpawnCraft spawn_craft = 4;
+    craft_controls.SetCraftAttitude set_craft_attitude = 5;
+    craft_controls.SetCraftTargetDirection set_craft_target_direction = 6;
   }
 }
