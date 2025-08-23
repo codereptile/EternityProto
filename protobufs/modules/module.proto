@@ -4,11 +4,13 @@ package modules;
 import "modules/aerodynamics.proto";
 import "modules/engine.proto";
 import "modules/guidance.proto";
+import "modules/gun.proto";
 
 message Module {
   oneof frame_type {
     AerodynamicsModule aerodynamics = 1;
     EngineModule engine = 2;
     GuidanceModule guidance = 3;
+    GunModule gun = 4;
   }
 }

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package modules;
+
+import "datatypes/local.proto";
+
+message GunModule {
+  float cycle_duration_seconds = 1;
+  datatypes.Vec3Local offset = 2;
+  float projectile_velocity = 3;
+}

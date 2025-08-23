@@ -13,3 +13,7 @@ message SetCraftTargetDirection {
   uint64 craft_id = 1;
   datatypes.Vec3Local target_vector = 2;
 }
+
+message CraftFirePrimaryWeapon {
+  uint64 craft_id = 1;
+}

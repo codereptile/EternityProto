@@ -2,6 +2,7 @@ syntax = "proto3";
 package eternity;
 
 import "craft.proto";
+import "projectile.proto";
 
 message Frame {
   float timestamp = 1;
@@ -10,11 +11,13 @@ message Frame {
 message WorldBasicFrame {
   Frame frame = 1;
   repeated CraftBasic crafts = 2;
+  repeated Projectile projectiles = 3;
 }
 
 message WorldKeyFrame {
   Frame frame = 1;
   repeated CraftKey crafts = 2;
+  repeated Projectile projectiles = 3;
 }
 
 message WorldFrame {

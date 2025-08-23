@@ -1,0 +1,11 @@
+syntax = "proto3";
+package eternity;
+
+import "datatypes/global.proto";
+import "datatypes/local.proto";
+import "part.proto";
+
+message Projectile {
+  datatypes.Vec3Global position = 2;
+  datatypes.Vec3Local velocity = 4;
+}
