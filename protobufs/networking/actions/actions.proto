@@ -19,6 +19,7 @@ message Action {
     SpawnCraft spawn_craft = 4;
     craft_controls.SetCraftAttitude set_craft_attitude = 5;
     craft_controls.SetCraftTargetDirection set_craft_target_direction = 6;
-    craft_controls.CraftFirePrimaryWeapon craft_fire_primary_weapon = 7;
+    craft_controls.CraftStartFirePrimaryWeapon craft_start_fire_primary_weapon = 7;
+    craft_controls.CraftStopFirePrimaryWeapon craft_stop_fire_primary_weapon = 8;
   }
 }
