@@ -2,8 +2,21 @@ syntax = "proto3";
 
 package modules;
 
+message MouseAimFlightKSP {
+
+}
+
+message MouseAimFlight {
+
+}
+
+
 message GuidanceModule {
   optional uint64 pitch_control_axis = 1;
   optional uint64 yaw_control_axis = 2;
   optional uint64 roll_control_axis = 3;
+  oneof guidance_module {
+    MouseAimFlightKSP mouse_aim_flight_ksp = 4;
+    MouseAimFlight mouse_aim_flight = 5;
+  }
 }

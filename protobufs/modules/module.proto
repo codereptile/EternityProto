@@ -7,7 +7,7 @@ import "modules/guidance.proto";
 import "modules/gun.proto";
 
 message Module {
-  oneof frame_type {
+  oneof module {
     AerodynamicsModule aerodynamics = 1;
     EngineModule engine = 2;
     GuidanceModule guidance = 3;
