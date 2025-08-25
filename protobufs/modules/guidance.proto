@@ -7,7 +7,10 @@ message MouseAimFlightKSP {
 }
 
 message MouseAimFlight {
-
+  float pitch_max_deflection_threshold_degrees = 1;
+  float yaw_max_deflection_threshold_degrees = 2;
+  float roll_max_deflection_threshold_degrees = 3;
+  float roll_self_level_max_deflection_threshold_degrees = 4;
 }
 
 

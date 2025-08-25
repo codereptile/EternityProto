@@ -16,14 +16,15 @@ message Constraint {
   repeated float axis_limits_hi = 7;  // 6 elements for 6DOF
 }
 
+// TODO: think about how to use degrees for human-readable config files vs radians for networking:
 message ConstraintControl {
   uint64 constraint_id = 1;
-  float pitch_min = 2;
-  float pitch_max = 3;
-  float yaw_min = 4;
-  float yaw_max = 5;
-  float roll_min = 6;
-  float roll_max = 7;
+  float pitch_min_degrees = 2;
+  float pitch_max_degrees = 3;
+  float yaw_min_degrees = 4;
+  float yaw_max_degrees = 5;
+  float roll_min_degrees = 6;
+  float roll_max_degrees = 7;
 }
 
 message ControlAxis {
