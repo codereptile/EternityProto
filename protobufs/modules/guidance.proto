@@ -6,11 +6,19 @@ message MouseAimFlightKSP {
 
 }
 
+message DampeningCurvePoint {
+  float speed = 1;
+  float coef = 2;
+}
+
 message MouseAimFlight {
   float pitch_max_deflection_threshold_degrees = 1;
   float yaw_max_deflection_threshold_degrees = 2;
   float roll_max_deflection_threshold_degrees = 3;
   float roll_self_level_max_deflection_threshold_degrees = 4;
+  repeated DampeningCurvePoint pitch_dampening_curve = 5;
+  repeated DampeningCurvePoint yaw_dampening_curve = 6;
+  repeated DampeningCurvePoint roll_dampening_curve = 7;
 }
 
 
